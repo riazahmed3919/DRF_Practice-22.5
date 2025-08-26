@@ -23,6 +23,6 @@ class BookSerializer(serializers.ModelSerializer):
         model = Book
         fields = ['id', 'title', 'isbn', 'published_date', 'availability_status', 'category', 'author', 'publisher']
 
-    author = serializers.HyperlinkedRelatedField(queryset=Author.objects.all(), view_name='specific-author')
-    category = serializers.HyperlinkedRelatedField(queryset=Category.objects.all(), view_name='specific-category')
-    publisher = serializers.HyperlinkedRelatedField(queryset=Publisher.objects.all(), view_name='specific-publisher')
+    author = serializers.HyperlinkedRelatedField(queryset=Author.objects.all(), view_name='author-detail')
+    category = serializers.HyperlinkedRelatedField(queryset=Category.objects.all(), view_name='category-detail')
+    publisher = serializers.HyperlinkedRelatedField(queryset=Publisher.objects.all(), view_name='publisher-detail')
