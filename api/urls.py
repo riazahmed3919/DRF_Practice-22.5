@@ -1,8 +1,8 @@
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
+from rest_framework_nested import routers
 from books.views import BookViewSet, CategoryViewSet, AuthorViewSet, PublisherViewSet
 
-router = DefaultRouter()
+router = routers.DefaultRouter()
 router.register('books', BookViewSet)
 router.register('categories', CategoryViewSet)
 router.register('authors', AuthorViewSet)
